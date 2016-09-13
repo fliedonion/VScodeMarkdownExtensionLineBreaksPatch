@@ -23,10 +23,40 @@ after change setting, you must be reopen vscode. ( Window opened by `Open New Wi
 
 Requirement:
 
-OS : Windows
-.NET Framework: 3.5
-Tested VScode version: 1.5.2 ( may be 1.4 also ok.)
+OS : Windows  
+.NET Framework: 3.5  
+Tested VScode version: 1.5.2 ( may be 1.4 also ok.)  
 
+* Run as Administrator( to access `Program Files (x86)` )
 * VScode installed at `C:\Program Files (x86)\Microsoft VS Code`
 * vscode-markdown located at `C:\Program Files (x86)\Microsoft VS Code\resources\app\extensions\markdown`
 * vscode-markdown `markdown-it` version. (tested version is vscode-markdown 0.2.0)
+
+---
+
+## What will happen, after this code run.
+
+This program insert one line to `C:\Program Files (x86)\Microsoft VS Code\resources\app\extensions\markdown\out\extension.js`.
+
+```js
+    MDDocumentContentProvider.prototype.createRenderer = function () {
+        var hljs = require('highlight.js');
+        var mdnh = require('markdown-it-named-headers');
+        var md = require('markdown-it')({
+            html: true,
+            highlight: function (str, lang) {
+```
+to
+```js
+    MDDocumentContentProvider.prototype.createRenderer = function () {
+        var hljs = require('highlight.js');
+        var mdnh = require('markdown-it-named-headers');
+        var md = require('markdown-it')({
+            breaks: vscode.workspace.getConfiguration('markdown')['markdown-it-breaks']||false,
+            html: true,
+            highlight: function (str, lang) {
+```
+
+This program alsow backup `extension.js` to `extension.js.yyyyMMddHHmmss.backup` in same folder.
+
+That's all.
