@@ -1,0 +1,9 @@
+syntax: glob
+.vs/
+*.suo
+*.csproj.user
+bin/[Dd]ebug/
+obj/[Dd]ebug/
+bin/[Rr]elease/
+obj/[Rr]elease/
+.git/

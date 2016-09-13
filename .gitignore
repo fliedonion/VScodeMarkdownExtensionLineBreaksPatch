@@ -1,0 +1,9 @@
+[oO]bj/
+[bB]in/
+[dD]ebug/
+[rR]elease/
+.DS_Store
+*.suo
+*.user
+.vs/
+.hg/
