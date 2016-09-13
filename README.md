@@ -18,3 +18,15 @@ after change setting, you must be reopen vscode. ( Window opened by `Open New Wi
     "markdown.markdown-it-breaks": true
 }
 ```
+
+---
+
+Requirement:
+
+OS : Windows
+.NET Framework: 3.5
+Tested VScode version: 1.5.2 ( may be 1.4 also ok.)
+
+* VScode installed at `C:\Program Files (x86)\Microsoft VS Code`
+* vscode-markdown located at `C:\Program Files (x86)\Microsoft VS Code\resources\app\extensions\markdown`
+* vscode-markdown `markdown-it` version. (tested version is vscode-markdown 0.2.0)
