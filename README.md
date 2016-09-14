@@ -25,7 +25,7 @@ Requirement:
 
 OS : Windows  
 .NET Framework: 3.5  
-Tested VScode version: 1.5.2 ( may be 1.4 also ok.)  
+Tested VScode version: 1.3.1, 1.5.1, 1.5.2. ( may be available VScode 1.3.0 or above.)  
 
 * Run as Administrator( to access `Program Files (x86)` )
 * VScode installed at `C:\Program Files (x86)\Microsoft VS Code`
