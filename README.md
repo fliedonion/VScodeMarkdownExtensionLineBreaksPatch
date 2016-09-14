@@ -8,7 +8,7 @@ after this patch success, you can specify markdown-it's `breaks` option in setti
 
 |name|default|description|
 |-----|:-:|-------------|
-|markdown.markdown-it-breaks|false|same as markdown-it `breaks` option.new line inside markdown will be compile to `<br/>` in preview.|
+|markdown.markdown-it-breaks|false|same as markdown-it `breaks` option. If true, new line inside markdown will be `<br/>` when compile  preview html.|
 
 after change setting, you must be reopen vscode. ( Window opened by `Open New Window` menu, also affected )
 
@@ -23,8 +23,8 @@ after change setting, you must be reopen vscode. ( Window opened by `Open New Wi
 
 Requirement:
 
-OS : Windows  
-.NET Framework: 3.5  
+OS : Windows (x86, x64)
+.NET Framework: 3.5 or above
 Tested VScode version: 1.3.1, 1.5.1, 1.5.2. ( may be available VScode 1.3.0 or above.)  
 
 * Run as Administrator( to access `Program Files (x86)` )
